@@ -20,7 +20,7 @@ struct WeatherHomeView: View {
     @State private var isLoading: Bool = false
     @State private var showErrorAlert: Bool = false
     @State private var errorMessage: String = ""
-    @State private var isFirstAppear: Bool = true // Tracks initial appearance
+    @State private var isFirstAppear: Bool = true
     
     var body: some View {
         NavigationView {
@@ -29,9 +29,6 @@ struct WeatherHomeView: View {
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
-                // Background gradient
-//                LinearGradient(gradient: Gradient(colors: [Color.black, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-//                    .edgesIgnoringSafeArea(.all)
                 
                 // Tap gesture to dismiss the keyboard
                 Color.clear
@@ -178,8 +175,7 @@ struct WeatherHomeView: View {
         
         isLoading = true
         
-                let apiKey = "6f4a5722597cb1dc135bc5b4d5947aa2"
-//        let apiKey = "Api key here"
+        let apiKey = "OpenWeather Api key here"
         let weatherURLString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
         let forecastURLString = "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=\(apiKey)&units=metric"
         

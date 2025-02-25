@@ -19,9 +19,6 @@ struct ForecastView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-            // Background gradient
-//            LinearGradient(gradient: Gradient(colors: [Color.black, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-//                .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 20) {
                 if let weatherData = weatherData {

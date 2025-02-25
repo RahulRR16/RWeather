@@ -7,23 +7,16 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct OnboardingView: View {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
     
     var body: some View {
         ZStack {
-            // Gradient background
-//            LinearGradient(gradient: Gradient(colors: [Color.black, Color.purple]),
-//                           startPoint: .topLeading,
-//                           endPoint: .bottomTrailing)
-//            .edgesIgnoringSafeArea(.all)
             // Background Image
-                        Image("launchImg") // Replace with your image name
-                            .resizable()
-                            .scaledToFill()
-                            .edgesIgnoringSafeArea(.all) // Extends to full screen
+            Image("launchImg")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 TabView {
@@ -84,8 +77,8 @@ struct OnboardingPage: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-                .symbolRenderingMode(.multicolor) // Enable multicolor rendering
-                .foregroundStyle(.yellow, .orange, .white) // Apply multiple colors
+                .symbolRenderingMode(.multicolor)
+                .foregroundStyle(.yellow, .orange, .white)
             
             Text(title)
                 .font(.title)
