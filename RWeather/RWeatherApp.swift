@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct RWeatherApp: App {
+struct YourApp: App {
+    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if hasCompletedOnboarding {
+                WeatherHomeView()
+            } else {
+                OnboardingView()
+            }
         }
     }
 }
