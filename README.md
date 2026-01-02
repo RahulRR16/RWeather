@@ -2,7 +2,6 @@
 //  README.md
 //  RWeather
 //
-//  Created by Rahul on 02/01/2026.
 //
 
 T# RWeather App
